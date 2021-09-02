@@ -1,0 +1,26 @@
+application:
+  version: 0.0.1
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/clinic
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    #        use-new-id-generator-mappings: true
+    properties:
+      hibernate:
+        order_inserts: true
+        order_updates: true
+        generate_statistics: false
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        default_schema: public
+logging:
+  level:
+    default-logger: info
